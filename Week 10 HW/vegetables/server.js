@@ -26,6 +26,16 @@ app.listen (PORT, () => {
 
 //INDUCES
 //INDEX - table of contents. List all of the fruits
+app.get('/vegetables', async (req,res) => {
+    try {
+        const foundVegetables = await Vegetable.find({})
+        res.render('vegetables/Index', {
+            vegetables: foundVegetables
+        })
+    } catch (error) {
+        res.status (400).send({message: error.message})
+    }
+})
 
 //NEW - show user form to fill out to create a fruit
 //res.render does not need the forward slash before fruitsspecifically 
@@ -46,7 +56,7 @@ app.post('/vegetables', async (req, res) => {
     }
     try{
         const createdVegetable = await Vegetable.create(req.body)
-        res.send(createdVegetable)
+        res.redirect(`/vegetables/${createdVegetable._id}`)
     }catch(error) {
         res.status(400).send({message: error.message})
     }
@@ -54,6 +64,16 @@ app.post('/vegetables', async (req, res) => {
 //EDIT - show user a form to edit the fruit
 
 //SHOW - shows you 1 individual fruit
+app.get('/vegetables/:id', async (req, res) => {
+    try{
+        const foundVegetable = await Vegetable.findOne({_id: req.params.id})
+        res.render('vegetables/Show', {
+            vegetable: foundVegetable
+        })
+    } catch (error) {
+        res.status(400).send({message: error.message})
+    }
+})
 
 
 
