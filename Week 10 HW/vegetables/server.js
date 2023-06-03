@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const jsxEngine = require('jsx-view-engine')
-const Fruit = require('./models/fruit')
+const Vegetable = require('./models/vegetable')
 const PORT = process.env.PORT || 3000
 
 const app = express()
@@ -31,7 +31,7 @@ app.listen (PORT, () => {
 //UPDATE - backend only functionality that is used to update a fruit
 
 //CREATE - backend only functionality that is used to create a fruit
-app.post('/fruits', async (req, res) => {
+app.post('/vegetables', async (req, res) => {
     try{
 
     }catch(error) {

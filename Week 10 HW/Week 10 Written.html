@@ -1,12 +1,33 @@
-<ol>
-    <li>Explain what a REST API is. What makes an API "RESTful"?<br>
-    <li>What is Node.js and why is it often used when building server-side applications?<br>
-    <li>Express.js is a popular framework used in conjunction with Node.js. What are some of the key features of Express.js that make it useful for building web servers?<br>
-    <li>In Express.js, what is middleware and how is it used?<br>
-    <li>In terms of HTTP verbs, what is the difference between GET, POST, PUT, PATCH, and DELETE? When would you use each in the context of a RESTful API?<br>
-    <li>How would you handle parameters in the URL with Express.js? Provide an example.<br>
-    <li>How can you handle error situations when building an Express.js API?<br>
-    <li>When building a RESTful API with Express.js, how would you structure your routes for a resource like items? What would the endpoints look like for performing CRUD (Create, Read, Update, Delete) operations?<br>
-    <li>How would you parse incoming request bodies in Express.js? Provide an example of how you might handle a JSON payload.<br>
-    <li>How can testing be implemented for a RESTful API built with Node and Express? Provide an example of a test case for one of your API endpoints.<br>
-</ol>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <ol>
+        <li>Explain what a REST API is. What makes an API "RESTful"?<br>
+            -A REST (REpresentational State Transfer) API is an API that conforms to the REST architecture. This means that the API uses HTTP requests (get to retrieve, post to add, put/patch to update, and deletet to delete).
+        <li>What is Node.js and why is it often used when building server-side applications?<br>
+            -Node.js is a runtime environment that is used for executing JS outside the browser. It is often used in builiding server-side applications since its main feature is that is lightweight, using only low-level "core" modules. Node.js can be expanded via downloading open source packages. As a result of this Node.js has very good perforamance, being able to handle more traffic with less hardware. It has also been widely adopted by large businesses (better performance = less cost).
+        <li>Express.js is a popular framework used in conjunction with Node.js. What are some of the key features of Express.js that make it useful for building web servers?<br>
+            -Like node, express is also minimalistic and lightweight. The three main features of express are the ability to define routes, process HTTP requests using middleware. and the ability to use a view engine to render dynamic templates
+        <li>In Express.js, what is middleware and how is it used?<br>
+            -Middleware are functions that run after the server recevies a request, but before a response is sent. Middleware has access to the request object, responses object, and is able to process the request before a response is sent.
+        <li>In terms of HTTP verbs, what is the difference between GET, POST, PUT, PATCH, and DELETE? When would you use each in the context of a RESTful API?<br>
+            -Get retrieves data, post adds data, patch updates data, and delete deletes data. In terms of a RESTful api, get is used to retrieve a list. add adds to that list, put updates a specific item from the list, and delete deletes an item fromt the list. 
+        <li>How would you handle parameters in the URL with Express.js? Provide an example.<br>
+            -You would add your paramters after the route with /route/:parameter. You would then include the parameter in your response. 
+        <li>How can you handle error situations when building an Express.js API?<br>
+            -You can handle error situations when building an express API by using Jest/Supertest. You would write code to speificy the expected typeof or value of your responses.
+        <li>When building a RESTful API with Express.js, how would you structure your routes for a resource like items? What would the endpoints look like for performing CRUD (Create, Read, Update, Delete) operations?<br>
+            -You would organize your routes by their category (i.e. get/add/update/delete). I would think for CRUD, endpoints would usually have a parameter(s)
+        <li>How would you parse incoming request bodies in Express.js? Provide an example of how you might handle a JSON payload.<br>
+            -I would need to use the express.json() method. Specific code I would use would be: app.use(express.json())
+        <li>How can testing be implemented for a RESTful API built with Node and Express? Provide an example of a test case for one of your API endpoints.<br>
+            -You would use JEST/Supertest. To pull a specific example, in our day two lab this week we wrote a test that specified that we were looking for our response to be an object.
+    </ol>
+</body>
+</html>
