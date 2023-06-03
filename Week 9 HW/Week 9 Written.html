@@ -12,17 +12,20 @@
         <li>What goes well:<br>
             -Definely appreciate the comment code denoting each code section (and the styling around that comment)<br>
             -Kingdom select screen: I like that you have code that allows the player to rechoose their army after inital selection.<br>
-            -Actual Gameplay: Definetely an ambitous choice of project to try to get done in two weeks. I like the vision. Definetely what you have left fully unimplemented (turn indicator + timer for blitz chess) would be perfect additional features to be added come portfolio time.<br>
+            -Actual Gameplay: Definetely a very ambitous choice of project to try to get done in two weeks. I like the vision. Definetely what you have left fully unimplemented (turn indicator + timer for blitz chess) would be great additional features to be added come portfolio time. As an additional strech goal having the option for blitz/casual chess would be a good idea.<br>
         <li>Suggestions for improvement:<br>
             -Kingdom select screen: Instead of a alert that pops up to show the army selection, it would be a cool feature to have a modal/transparency toggle that shows the player choice over the army pictures<br>
             -Actual Gameplay:<br>
-            --I do notice as a bug that when you click an empty space<br>
-            --As a future feature media queries would be a good idea<br>
+            --I do notice as a bug that when you click an empty space the grid scrambles itself. Think this would be due to the code recognizing an empty space as an evt.target. Though you have the state variable, the conditional handling it simply is checking if the state varible in present instead of check t/f/etc. I would suggest changing the conditionals to check for a property that is unique to your chess pieces. When speaking to Andrew about his tetris game, he mentioned having an "invisible" grid over the visible one specifically for his tetris pieces. Might be worthwhile to look at his code to get ideas for displaying your peices and board.<br>
+            --With your chess pieces I am seeing that you are assigning them properties as well as one for a piece property. I notice that between pieces of the same type you have the type, color, and piece as the same. I would suggest using the piece property as an id unique for each piece. This would help prevent bugs with that would happen as a result of other pieces sharing the same piece property value.<br>
+            -Turn alternation/CPU AI/Blitz Chess feature: Will roll these three together as I think these are very closely related in terms of implementation. If you were to look at my Battleship project, I would suggest implementing something like my gridClick funtion. If you break it down, there is code present to allow only clicking a specific set of elements depending on who's turn it is. After a click the turn value is updated and the next player's turn begins (the AI). I use the Math.Random method to simulate an opponents choices. In your case I would randomly select a number to select the piece to be moved. Then Math.random again to choose location to go. As I write this I realize this is a very big rabbit hole to go down. Think it would be better to just have the game be for two real poeple againt each other. First big step towards this would be the restricting access to specific elements based on turn I mentioned.<br>
+            -As a future feature media queries would be a good idea<br>
         <li>Parts of code that could be more clear:<br>
-            -If I were to look at this code without any prior information (aka Terrance's Presentation) I would question the inclusion of code for a timer. I am not seeing a timer element present in the actual game when run. But since Terrance did address this in his presentation that he wanted a blitz chess feature, I will make the following suggestions.
+            -If I were to look at this code without any prior information (aka Terrance's Presentation) I would question the inclusion of code for a timer. I am not seeing a timer element present in the actual game when run. But since Terrance did address this in his presentation that he wanted a blitz chess feature, please see the the suggestions for improvement section for my suggestions.
+            -One thing that would help condense the code in the html file would be the usage of loops in creating the chessboard (can also roll in ids too).
         <li>Notable strengths of code's style/approach:<br>
             -Big strength I noticed right off that bat that the code was neatly organized
-            -Even if not fully implemented the baseline code is present for the features that are planned (rather than just pseudo code).
+            -Even if not fully implemented the baseline code and/or pseudocode is present for the features that are planned.
     </ol>
 </body>
 </html>
