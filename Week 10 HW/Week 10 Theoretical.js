@@ -16,7 +16,12 @@
 //     [10,  9,  8, 7]]
 
 const matrix = (N) => {
-    console.log("Test")
+    for (let i = 0; i < N; i++){
+        let `array${i}` = []
+    }
+    console.log (array0)
+    console.log (array1)
+    console.log (array2)
 }
 
-matrix(5)
+matrix(2)
