@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <ol>
+        <li>What is Express in Node.js and why is it used?<br>
+            -Express is an open source web app framework for Node.js. It allows for the quick and easy design and building of web apps/APIs. Express supports Javascript this allows express to be widely adaptable/adpoted.
+        <li>How does Mongoose help in using MongoDB with Node.js?<br>
+            -Mongoose is an Object Data Modeling library for MongoDB and allows us to utilize MongoDB schema(s). This eliminates the need to write the schema ourselves.
+        <li>Can you explain the role of Mongoose in managing relationships between data?<br>
+            -Mongoose models those relationships via schemas. With schemas Mongoose defines a set document data structures as well as specific expected data types
+        <li>What is a software design pattern? Give an example.<br>
+            -A software design pattern is a general reusuable solution on how to solve a common problem when designing an application or system. An example of a software design pattern would be the MVC architecture.
+        <li>Can you explain the MVC architecture in detail?<br>
+            -The MVC (Model, View, Controllers) architecture separates an application into three main parts: model, view, and controllers. Each part is separted to handle specific parts of an application. This is done to provide a better division of labor and better maintenance of the application. 
+        <li>What roles do Model, View, and Controller play in the MVC architecture?<br>
+            -Models represent the data and rules governing access to and updates to data
+            -Views render the contents of the model. It specifies how the model data should be presented
+            -Controllers handle user input and calls model/view methods
+        <li>Define Latency and Throughput in the context of APIs.<br>
+            -Latency is the delay before a transfer of data starts following the instruction for said transfer to start. Throughput is the amount of data moved in from one place to another in a given time period
+        <li>Why is it important to minimize latency and maximize throughput in APIs?<br>
+            -It is important to minimize latency and maximize throughput in APIs because it allows the user experience to be fast and smooth. With badly written/optimized code, what takes seconds could take minutes instead
+        <li>What is Authentication in terms of web development?<br>
+            -Authentication is the process by which the identity of a user is verified by obtaining credentials and verifing those credentials.
+        <li>How does the authorization process start?<br>
+            -Authorization starts if credentials are valid.
+        <li>What is express.static used for in Express?<br>
+            -'express.static' is a built-in middleware function in Express used to serve static files (i.e. images, CSS, and JavaScript) directly to the client
+        <li>Can you give an example of serving static files using express.static?<br>
+            -An example of serving a static file via express.static would be by calling a directory you have images saved in. These images can then be loaded from that directory by using /static as a predic pior to the path for the image
+        <li>What is Jest and why is it used?<br>
+            -Jest is a JS testing framework designed to be simple and is mainly used in automated testing. Jest comes with built in support for asertions, mocking, and code coverage.
+        <li>How can Supertest be helpful when working with Jest?<br>
+            -Supertest is a high-level abstraction for testing HTTP. It allows us to test our API endpoints by sending HTTP requests and asserting the response.
+        <li>Can you describe how manual and automated tests are executed?<br>
+            -Manual tests are executed by a user (i.e. through the UI of an application) while automated tests are executed by running scripts (i.e. tests that are written via code)
+        <li>What is the difference between unit testing, integration testing, and end-to-end testing?<br>
+            -Unit Testing focuses on individual components, functions or methods
+            -Integration Testing tests a set of components that collaborate to perform a task
+            -End to end Testing tests an application as a whole as if it were running in the real world
+        <li>Can you provide examples of functional, regression, smoke, and performance tests?<br>
+            -Functional testing would have a T/F result. Does the app do ___ or not
+            -Regression testing tests if anything is broken in the application
+            -Smoke testing tests is the application works
+            -Performance testing tests the perforamce of the application under load
+        <li>What is meant by positive testing and negative testing in a functional testing context?<br>
+            -Positive testing tests if the app works when it is supossed to work (login with the correct login)
+            -Negative testing tests if the app fails when it is supossed to fail (no login if the login is wrong)
+        <li>How does load testing assess the behavior of software?<br>
+            -Load testing would be equivalent to game server stress testing. An application may work with with a simple request, but due to badly written code can cause the user experience to become signifigantly slowed or cause the application to fail. 
+        <li>What aspects does usability testing assess in a software application?<br>
+            -Usability testing assesses the ease of use of the application
+        <li>Why is security testing crucial in a software development life cycle?<br>
+            -Security testing is crucial because you want to make sure that any confidential information is not acessible simply by looking at the code (i.e. login passwords should not be plain text, but hashed)
+        <li>Can you explain what compatibility testing is?<br>
+            -Compatability testing tests an application with various hardware, OS, and network entironments. Not all users will be running the same computer setup.
+        <li>What is the aim of recovery testing and why is it important?<br>
+            -Recovery testing evaluates how an application responds to hardware/software failures. This is important because the point of recovery testing is to facilitate the application returning to its prefailure state.
+        <li>What is User Acceptance Testing (UAT) and who typically performs it?<br>
+            -UAT tests if the application does what a customer requested it to do. UAT is usually run by the user/customer
+        <li>Can you describe a scenario in which you would use each of the different testing types mentioned in the notes?<br>
+            -Functional: Testing the features of the application 
+            -Regression: Testing the features of an application after adding a new feature/changing the application's code
+            -Smoke: Testing a build after completing a milestone
+            -Performance: Testing how an application handles one user vs. many
+            -Usability: Testing to see if parts of the application UI can be easily reached
+            -Security: When creating a website with logins
+            -Compatability: When creating a web based application
+            -Recovery: Testing to see if an application will remember your place if it crashes
+            -UAT: When asked to implement a specific feature to an application by the end-user
+    </ol>
+</body>
+</html>
